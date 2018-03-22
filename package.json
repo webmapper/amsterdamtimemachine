@@ -10,15 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/webmapper/amsterdamtimemachine.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/webmapper/amsterdamtimemachine/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/webmapper/amsterdamtimemachine#readme",
   "devDependencies": {
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",

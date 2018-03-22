@@ -9,7 +9,13 @@ const PATHS = {
 
 module.exports = {
   entry: {
-    app: PATHS.app
+    app: PATHS.app + '/app.js'
+  },
+  resolve: {
+    extensions: ['', '.html', '.js', '.json', '.scss', '.css'],
+    alias: {
+        leaflet_css: __dirname + '/node_modules/leaflet/dist/leaflet.css'
+    }
   },
   output: {
     path: PATHS.build,
@@ -18,7 +24,7 @@ module.exports = {
   module: {
         loaders: [
           {test: /\.css?$/, loader: ExtractTextPlugin.extract('style-loader','css-loader')},
-          {test: /\.(png|jpg)$/, loader: 'file-loader?name=images/[name].[ext]'}
+          {test: /\.(png|jpg|gif)$/, loader: 'file-loader?limit=8192'}
         ]
   },
   plugins: [
