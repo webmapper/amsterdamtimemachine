@@ -1,20 +1,17 @@
 var L = require('leaflet');
 require('leaflet_css');
-import './../styles/app.css';
+require('./../styles/app.css');
 
 var map = L.map('map-canvas', {
   scrollWheelZoom: false
 });
+map.attributionControl.setPrefix('');
  
-map.setView([5.5, 52], 11);
+map.setView([52.3719, 4.9012], 15);
  
-var attribution = 'Kadaster';
- 
-var tiles = 'https://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaartgrijs/EPSG:3857/{z}/{x}/{y}.png';
- 
-var layer = L.tileLayer(tiles, {
-  maxZoom: 18,
-  attribution: attribution
+var bglayer = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaartgrijs/EPSG:3857/{z}/{x}/{y}.png', {
+  maxZoom: 20,
+  attribution: 'Referentiekaart: <a href="https://www.kadaster.nl/">Kadaster</a>'
 });
  
-layer.addTo(map);
+bglayer.addTo(map);
