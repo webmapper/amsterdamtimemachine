@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');
 html, body {
   margin: 0;
   padding: 0;
@@ -6,6 +8,27 @@ html, body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   -webkit-font-smoothing: antialiased; 
   color: #333;
+}
+a, a:visited{
+  color: #C40008;
+  text-decoration: none;
+}
+#footer a, #footer a:visited{
+  color: #fff;
+  text-decoration: underline;
+}
+#header{
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 0;
+  background-color: #424242;
+  text-align: center;
+  height: 66px;
+}
+h1{
+  font-size: 76px;
+  color: #8D8D8D;
+  margin: 0;
+  padding: 0;
 }
 #map-canvas {
   width: 100%;
@@ -25,4 +48,53 @@ html, body {
 
 .leaflet-control-attribution a {
   text-decoration: underline;
+}
+
+#maps-info{
+  display: grid;
+  grid-template-columns: 30% auto;
+  margin: 30px 15% 30px 15%;
+}
+#maps-info div img{
+  width: 100%;
+  margin-top: 24px;
+}
+
+#years{
+  position: absolute;
+  right: 12px;
+  top: 76px;
+  z-index: 100000;
+}
+#years button{
+  display: block;
+  margin-bottom: 20px;
+  padding:5px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #fff;
+  color: #424242;
+  border:2px solid #ccc;
+}
+
+#footer{
+  background-color: #424242;
+  margin-top: 40px;
+  padding: 20px 15% 100px 15%;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  #header{
+    height: 40px;
+  }
+  h1{
+    font-size: 32px;
+    padding-top: 10px;
+  }
+  #maps-info{
+    display: block;
+    margin: 30px 15% 30px 15%;
+  }
 }

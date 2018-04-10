@@ -11,71 +11,109 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
     </head>
     <body>
-       <div id="map-canvas"></div>
-
-       <div id="maps-info">
-
-            <img src="images/1985.jpg" title="1985" />
-           
-
-            <h3>1985 - Dienst Openbare Werken</h3>
-
-            De kaarten zijn gemaakt door de inmiddels hernoemde <a href="https://nl.wikipedia.org/wiki/Dienst_der_Publieke_Werken_(Amsterdam)">Dienst der Publieke Werken</a>. De afzonderlijke bladen, te vinden in <a href="http://beeldbank.amsterdam.nl/afbeelding/DUIZ00006000001">de beeldbank van het Stadsarchief</a>, zijn door Jan Hartmann gegeorefereerd en samengevoegd. 
-
-            <code>https://vt1.maps.geocoders.nl/atm-tiles/pw_1985_EPSG3857/{z}/{x}/{y}.png</code>
+        <div id="header">
+            <h1>Amsterdam Time Machine</h1>
+        </div>
 
 
+        <div id="map-canvas"></div>
 
-            <img src="images/1943.jpg" title="1943" />
+        <div id="years">
+            <button>1985</button>
+            <button>1943</button>
+            <button>1909</button>
+            <button>1876</button>
+            <button>1724</button>
+            <button>1625</button>
+        </div>
 
-            <h3>1943 - Dienst der Publieke Werken</h3>
+        <div id="maps-info">
 
-            In de oorlogsjaren maakte de Dienst der Publieke Werken naast de 1:1000 bladen ook 1:2500 kaarten. Die laatste krijgt u op de lagere zoomniveaus voorgeschoteld. De kaarten zijn door Jan Hartmann gegeorefereerd en samengevoegd.
+            <div>
+                <img src="images/1985.jpg" title="1985" />
+            </div>
 
-            <code>https://vt1.maps.geocoders.nl/atm-tiles/pw_1943_EPSG3857/{z}/{x}/{y}.png</code>
+            <div>
+                <h3>1985 - Dienst Openbare Werken</h3>
 
+                De kaarten zijn gemaakt door de inmiddels hernoemde <a href="https://nl.wikipedia.org/wiki/Dienst_der_Publieke_Werken_(Amsterdam)">Dienst der Publieke Werken</a>. De afzonderlijke bladen, te vinden in <a href="http://beeldbank.amsterdam.nl/afbeelding/DUIZ00006000001">de beeldbank van het Stadsarchief</a>, zijn door Jan Hartmann gegeorefereerd en samengevoegd. 
 
-
-            <img src="images/1909.jpg" title="1909" />
-
-            <h3>1909 - Dienst der Publieke Werken</h3>
-
-            De eerste serie 1:1000 bladen van de Dienst der Publieke Werken stamt uit 1909. Doordat de Dienst een eigen projectie gebruikte, kunnen de kaarten uit deze serie een afwijking tot een meter of twee hebben. De kaarten zijn door Jan Hartmann gegeorefereerd en samengevoegd.
-
-            <code>https://vt1.maps.geocoders.nl/atm-tiles/pw_1909_EPSG3857/{z}/{x}/{y}.png</code>
-
-
-
-            <img src="images/1870.jpg" title="1876" />
-
-            <h3>1876 - Buurtatlas Loman</h3>
-
-            In 1876 bracht uitgever J.C. Loman jr. een gedrukte <a href="https://archief.amsterdam/inventarissen/overzicht/10043.nl.html">atlas</a> in 101 bladen op de markt, waarop de dan net doorgevoerde tweede <a href="https://www.amsterdam.nl/stadsarchief/nieuws/omnummering/">omnummering</a> is opgenomen. De kaarten zijn door Jan Hartmann gegeorefereerd en samengevoegd.
-
-            <code>http://t{s}.maps.geocoders.nl/dgg/og06mu2w/{z}/{x}/{y}.jpeg</code>
+                <code>https://vt1.maps.geocoders.nl/atm-tiles/pw_1985_EPSG3857/{z}/{x}/{y}.png</code>
+            </div>
 
 
+            <div>
+                <img src="images/1943.jpg" title="1943" />
+            </div>
+
+            <div>
+                <h3>1943 - Dienst der Publieke Werken</h3>
+
+                In de oorlogsjaren maakte de Dienst der Publieke Werken naast de 1:1000 bladen ook 1:2500 kaarten. Die laatste krijgt u op de lagere zoomniveaus voorgeschoteld. De kaarten zijn door Jan Hartmann gegeorefereerd en samengevoegd.
+
+                <code>https://vt1.maps.geocoders.nl/atm-tiles/pw_1943_EPSG3857/{z}/{x}/{y}.png</code>
+            </div>
 
 
-            <img src="images/1724.jpg" title="1724" />
+            <div>
+                <img src="images/1909.jpg" title="1909" />
+            </div>
 
-            <h3>1724 - Gerrit de Broen</h3>
+            <div>
+                <h3>1909 - Dienst der Publieke Werken</h3>
 
-            De kaart van Gerrit de Broen is gemaakt toen de stormachtige groei die eind 16e eeuw was ingezet al ten einde was. De Plantage en oostelijke eilanden bieden nog zeeën van ruimte, veel zou de stad de anderhalve eeuw daarop niet veranderen. De kaartbladen zijn gegeorefereerd en samengevoegd door Webmapper.
+                De eerste serie 1:1000 bladen van de Dienst der Publieke Werken stamt uit 1909. Doordat de Dienst een eigen projectie gebruikte, kunnen de kaarten uit deze serie een afwijking tot een meter of twee hebben. De kaarten zijn door Jan Hartmann gegeorefereerd en samengevoegd.
 
-            <code>http://t{s}.maps.geocoders.nl/dgg/d7bcno4e/{z}/{x}/{y}.png</code>
+                <code>https://vt1.maps.geocoders.nl/atm-tiles/pw_1909_EPSG3857/{z}/{x}/{y}.png</code>
+            </div>
+
+
+            <div>
+                <img src="images/1870.jpg" title="1876" />
+            </div>
+
+            <div>
+                <h3>1876 - Buurtatlas Loman</h3>
+
+                In 1876 bracht uitgever J.C. Loman jr. een gedrukte <a href="https://archief.amsterdam/inventarissen/overzicht/10043.nl.html">atlas</a> in 101 bladen op de markt, waarop de dan net doorgevoerde tweede <a href="https://www.amsterdam.nl/stadsarchief/nieuws/omnummering/">omnummering</a> is opgenomen. De kaarten zijn door Jan Hartmann gegeorefereerd en samengevoegd.
+
+                <code>http://t{s}.maps.geocoders.nl/dgg/og06mu2w/{z}/{x}/{y}.jpeg</code>
+            </div>
 
 
 
-            <img src="images/1625.jpg" title="1625" />
+            <div>
+                <img src="images/1724.jpg" title="1724" />
+            </div>
 
-            <h3>1625 - Balthasar Florisz. van Berckenrode</h3>
+            <div>
+                <h3>1724 - Gerrit de Broen</h3>
 
-            In 1625 is de <a href="https://nl.wikipedia.org/wiki/Uitleg_van_Amsterdam_in_de_17e_eeuw#Derde_Uitleg">derde uitleg</a>, waarbij de westelijke grachtengordel gereed is gekomen, net aangelegd. Ook de Jordaan in wording is te zien. De kaartbladen zijn gegeorefereerd en samengevoegd door Webmapper.
+                De kaart van Gerrit de Broen is gemaakt toen de stormachtige groei die eind 16e eeuw was ingezet al ten einde was. De Plantage en oostelijke eilanden bieden nog zeeën van ruimte, veel zou de stad de anderhalve eeuw daarop niet veranderen. De kaartbladen zijn gegeorefereerd en samengevoegd door Webmapper.
 
-            <code>http://t{s}.maps.geocoders.nl/dgg/uibzebxa/{z}/{x}/{y}.png</code>
+                <code>http://t{s}.maps.geocoders.nl/dgg/d7bcno4e/{z}/{x}/{y}.png</code>
+            </div>
 
-            Van alle kaarten zijn door Webmapper tiles gemaakt, die onder een CC-BY licentie worden aangeboden.
+
+            <div>
+                <img src="images/1625.jpg" title="1625" />
+            </div>
+
+            <div>
+                <h3>1625 - Balthasar Florisz. van Berckenrode</h3>
+
+                In 1625 is de <a href="https://nl.wikipedia.org/wiki/Uitleg_van_Amsterdam_in_de_17e_eeuw#Derde_Uitleg">derde uitleg</a>, waarbij de westelijke grachtengordel gereed is gekomen, net aangelegd. Ook de Jordaan in wording is te zien. De kaartbladen zijn gegeorefereerd en samengevoegd door Webmapper.
+
+                <code>http://t{s}.maps.geocoders.nl/dgg/uibzebxa/{z}/{x}/{y}.png</code>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p>De tiles van de kaarten zijn beschikbaar gemaakt door Edward Mac Gillavry (<a href="http://www.webmapper.net/">Webmapper</a>) en Menno den Engelse (<a href="http://www.islandsofmeaning.nl/">Islands of Meaning</a>). De tiles worden gehost door <a href="https://www.clariah.nl/">CLARIAH</a>.</p>
+
+            <p>De tiles worden onder een CC-0 licentie aangeboden, voor zover er geen rechthebbenden zijn op het originele kaartmateriaal. Bij gebruik wordt het op prijs gesteld als u de herkomst van de tiles vermeldt.</p>
+
+            <p>De Amsterdam Time Machine is een samenwerking van verschillende instellingen die de geschiedenis van Amsterdam middels (linked) data toegankelijker maken. Meer informatie is te vinden bij <a href="http://www.create.humanities.uva.nl/amsterdam-time-machine/">CREATE</a>.</p>
 
 
 
