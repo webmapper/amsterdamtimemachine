@@ -1,7 +1,7 @@
 var L = require('leaflet');
 require('leaflet_css');
 require('leaflet-hash');
-require('./../styles/app.css');
+require('./styles/app.css');
 
 var bglayer = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaartgrijs/EPSG:3857/{z}/{x}/{y}.png', {
   maxZoom: 20,

@@ -1,40 +1,73 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-const PATHS = {
-  app: path.join(__dirname, 'client','scripts'),
-  build: path.join(__dirname, 'build')
-};
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
-  entry: {
-    app: PATHS.app + '/app.js'
+  entry: './src/index.js',
+  devServer: {
+    port: 8080,
+    contentBase: path.join(__dirname, "dist")
   },
   resolve: {
-    extensions: ['', '.html', '.js', '.json', '.scss', '.css'],
+    extensions: ['.html', '.js', '.json', '.css'],
     alias: {
-        leaflet_css: __dirname + '/node_modules/leaflet/dist/leaflet.css'
+      leaflet_css: __dirname + '/node_modules/leaflet/dist/leaflet.css'
     }
   },
-  output: {
-    path: PATHS.build,
-    filename: 'bundle.js'
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
   },
   module: {
-        loaders: [
-          {test: /\.css?$/, loader: ExtractTextPlugin.extract('style-loader','css-loader')},
-          {test: /\.(png|jpg|gif)$/, loader: 'file-loader?limit=8192'}
+    rules: [
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader",
+            options: { minimize: true }
+          }
         ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader"
+        ]
+      },
+      {
+        test: /\.(png|jpe?g)/i,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              name: "./images/[name].[ext]",
+              limit: 10000
+            }
+          },
+          {
+            loader: "img-loader"
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: __dirname + '/client/index.html',
-      filename: 'index.html',
+      template: './src/index.html',
       inject: 'body'
     }),
-    new ExtractTextPlugin(
-        'bundle.css'
-    )
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    })
   ]
 };
