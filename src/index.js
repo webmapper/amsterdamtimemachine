@@ -63,7 +63,7 @@ var map = L.map('map-canvas', {
 });
 map.attributionControl.setPrefix('');
 
-map.setView([52.3719, 4.9012], 15);
+map.setView([52.36908,4.89353], 16);
 
 L.control.layers(baseLayers, overlays, {collapsed: false}).addTo(map);
 
