@@ -3,9 +3,11 @@ require('leaflet_css');
 require('leaflet-hash');
 require('./styles/app.css');
 
-var bglayer = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaartgrijs/EPSG:3857/{z}/{x}/{y}.png', {
-  maxZoom: 20,
-  attribution: 'Referentiekaart: <a href="https://www.kadaster.nl/">Kadaster</a>'
+var bglayer = L.tileLayer('https://t{s}.data.amsterdam.nl/topo_wm/{z}/{x}/{y}.png', {
+  subdomains: '1234',
+  minZoom: 11,
+  maxZoom: 21,
+  attribution: 'Kaartgegevens: <a href="https://www.kadaster.nl/">Kadaster</a>, cartografie: <a href="https://www.webmapper.net/">Webmapper</a>'
 });
 
 var loman = new L.TileLayer('http://t{s}.maps.geocoders.nl/dgg/og06mu2w/{z}/{x}/{y}.jpeg', {
