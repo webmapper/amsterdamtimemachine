@@ -10,7 +10,7 @@ var bglayer = L.tileLayer('https://t{s}.data.amsterdam.nl/topo_wm/{z}/{x}/{y}.pn
   attribution: 'Kaartgegevens: <a href="https://www.kadaster.nl/">Kadaster</a>, cartografie: <a href="https://www.webmapper.net/">Webmapper</a>'
 });
 
-var loman = new L.TileLayer('https://images.huygens.knaw.nl/webmapper/maps/loman/og06mu2w/{z}/{x}/{y}.jpeg', {
+var loman = new L.TileLayer('https://images.huygens.knaw.nl/webmapper/maps/loman/{z}/{x}/{y}.jpeg', {
     attribution: 'Loman',
     subdomains: '1234',
     minZoom: 12,
@@ -47,16 +47,16 @@ var layer1943 = L.tileLayer('https://images.huygens.knaw.nl/webmapper/maps/pw-19
 });
 
 var baseLayers = {
-  "Referentiekaart": bglayer,
+  "A'dam": bglayer,
 };
 
 var overlays = {
-  "De Broen" : debroen,
-  "Berckenrode": berckenrode,
-  "Loman" : loman,
-  "Publieke Werken 1909": layer1909,
-  "Publieke Werken 1943": layer1943,
-  "Pulbieke Werken 1985": layer1985
+  "1625": berckenrode,
+  "1724" : debroen,
+  "1876" : loman,
+  "1909": layer1909,
+  "1943": layer1943,
+  "1985": layer1985
 };
 
 var map = L.map('map-canvas', {
